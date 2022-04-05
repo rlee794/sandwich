@@ -1,0 +1,20 @@
+<h1>Sandwich Title: Welcome to Sandwich Shop</h1>
+
+<h3> Ingredients </h3>
+
+<ul>
+    {% for ingredient in ingredients %}
+    <li>
+        <!-- <a href="/sandwich/ingredients/"{{ ingredient }}> {{ ingredient }}
+        </a> -->
+        <a href="{% url 'ingredients_list' ingredient %}">{{ ingredient }}</a>
+    </li>
+    {% endfor %}
+</ul>
+
+<p>
+    Click the button to make a sandwich!
+</p>
+<form action="/sandwich/random">
+    <input type="submit" value="Make a sandwich!" />
+</form>

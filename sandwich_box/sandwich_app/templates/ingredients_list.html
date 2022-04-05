@@ -1,0 +1,14 @@
+<h1>{{ ingredient_type|title }}</h1>
+
+<ul>
+    {% for ingredient in ingredients %}
+    <li>{{ ingredient }}</li>
+    {% endfor %}
+</ul>
+
+<br>
+<p> Click the button below to return Home!</p>
+
+<form action = "{% url 'sandwich' %}">
+    <input type = "submit" value = "Home">
+</form>
